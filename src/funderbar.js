@@ -10,21 +10,23 @@
 // to help guide you toward success in your work on the following exercises.
   _.define = function(input){
     // Declare a variable below that is assigned the value of input;
-    var result = FILL_ME_IN;
+    var result = input;
     // return the above variable
-    return FILL_ME_IN;
+    return result;
   }
 
 //_.dataType is wanting you to determine the data type of what is being passed into it.
 // Return the datatype of input: ie. string or number or boolean etc. 
 _.dataType = function(input){
   //Code Goes Below
+  return typeof input;
 
 }
 
 //_.sum takes two numbers as parameters and returns their sum
 _.sum = function(a,b){
     //Code Goes Below
+    return a + b;
     
 }
 
@@ -33,12 +35,14 @@ _.subtract = function(a,b){
   //Code Goes Below
   //For your code remember to subtract b from a
   //a - b
+  return a - b;
   
 }
 
 //_.multiply takes two numbers as parameters and returns their product
 _.multiply = function(a,b){
   //Code Goes Below
+  return a * b;
   
 }
 
@@ -46,6 +50,7 @@ _.multiply = function(a,b){
 _.divide = function(a,b){
   //Code Goes Below
   //a divided by b
+  return a / b;
   
 }
 
@@ -53,12 +58,15 @@ _.divide = function(a,b){
 _.remainderOperator = function(a,b){
   //Code Goes Below
   //return the remainder of a divided by b
+  return a % b;
 }
 
 //_.increment takes a number as a parameter and increces it by 1
 // Ensure you use the proper increment operator(not a+1)
 _.increment = function(a){
   //Code Goes Below
+  a++;
+  return a;
   
 }
 
@@ -66,6 +74,8 @@ _.increment = function(a){
 // Ensure you use the proper decrement operator (not a-1)
 _.decrement = function(a){
   //Code Goes Below
+  a--;
+  return a;
   
 }
 
@@ -88,24 +98,28 @@ _.mathOrder = function(test){
 //_.same takes two parameters and returns whether they are the equal or not
 _.same = function(a,b){
   //Code Goes Below
+  return a === b;
   
 }
 
 //_.greater takes two numbers as parameters and checks if a is greater than b
 _.greater = function(a,b){
   //Code Goes Below
+  return a > b; 
   
 }
 
 //_.lessThan takes two numbers as parameters and checks if a is less than b
 _.lessThan = function(a,b){
   //Code Goes Below
+  return a < b;
   
 }
 
 //_.falsyOrTruthy takes a parameter and determines whether it is TRUTHY or FALSY
 _.falsyOrTruthy = function(a){
    //Code Goes Below
+   return !!a;
    
 }
 
@@ -121,12 +135,14 @@ _.falsyOrTruthy = function(a){
   //_.andAnd will be using the && comparator
   _.andAnd = function(a,b,c,d) {
   //Code Goes Below
+  return a === b && c === d;
   
   }
 
     //_.orOr will be using the || comparator
     _.orOr = function(a,b,c,d) {
       //Code Goes Below
+      return a === b || c === d;
       
       }
 
@@ -134,12 +150,21 @@ _.falsyOrTruthy = function(a){
   //Create a basic if statement to pass the tests. 
   _.ifLogic = function(a, b){
     //Code Goes Below
+    if (a === b){
+      return "Great";
+    }
 
   }
 
     //Create a basic if else statement to pass the tests. 
     _.ifElseLogic = function(a, b){
       //Code Goes Below
+      if (a === b){
+        return "Great";
+      }
+      else {
+        return "Good";
+      }
 
     }
 
@@ -147,12 +172,19 @@ _.falsyOrTruthy = function(a){
     //Return the array as a single string.
     _.forLoop = function(a){
       //Code Goes Below
-
+      var result = "";
+      for (let i = 0; i < a.length; i++){
+        result += a[i];
+      }
+      return result;
     }
 
     //Using NESTED for loops, iterate through an array or arrays
     _.nestedForLoop = function(a){
       //Code Goes Below
+      for (let i = 0; i < a.length; i++){
+        return a[i];
+      }
       
     }
 
