@@ -182,24 +182,45 @@ _.falsyOrTruthy = function(a){
     //Using NESTED for loops, iterate through an array or arrays
     _.nestedForLoop = function(a){
       //Code Goes Below
+      var sum = 0
       for (let i = 0; i < a.length; i++){
-        return a[i];
+        for (let j = 0; j < a[i].length; j++){
+          sum += a[i][j];
+        }
       }
-      
+      return sum;
     }
 
     //While looping through the array passed determine the data type of the element. If the element is a number add it to a variable. At the end return that variable. 
     //If an index in the array is not a number add 1 to the above mentioned variable
     _.forIfElseNum = function(a){
       //Code Goes Below
-
+      var result = 0;
+      for (let i = 0; i < a.length; i++){
+        if (typeof a[i] === "number"){
+          result += a[i];
+        }
+        else{
+          result += 1;
+        }
+      }
+      return result;
     }
 
     //This function is similar to the above function. Only this time you will be building a sentence rather than a total number. Loop through the array and concatenate the strings in it to make a sentence.
     //If an index in the array is not a string add and empty string ("") to the local variable
     _.forIfElseStr = function(a){
       //Code Goes Below
-
+      var result = "";
+      for (let i = 0; i < a.length; i++){
+        if (typeof a[i] === "string"){
+          result += a[i];
+        }
+        else{
+          result += "";
+        }
+      }
+      return result;
     }
 
     //In this function you will loop though the passed in array. Prior to that you need to check the second parameter to determine what you will be returning. 
@@ -207,6 +228,12 @@ _.falsyOrTruthy = function(a){
     //You may notice you did this work already in previous functions but need to combine them in some way. Ideally, you should call the previous two functions in your implementation instead of copy/pasting the 'guts'.
     _.ifElseFor = function(a,b){
       //Code Goes Below
+      if (b === "number"){
+        return _.forIfElseNum(a)
+      }
+      else{
+        return _.forIfElseStr(a)
+      }
 
     }
 

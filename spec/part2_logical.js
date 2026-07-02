@@ -145,12 +145,12 @@
         [7,8,9]
       ];
       it('TEST ONLY: Access the Array\'s Values', function(){
-        expect(FILL_ME_IN).to.eql(1);
-        expect(FILL_ME_IN).to.eql(9);
-        expect(FILL_ME_IN).to.eql(5);
-        expect(FILL_ME_IN).to.eql(4);
-        expect(FILL_ME_IN).to.eql(8);
-        expect(FILL_ME_IN).to.eql(2);
+        expect(arryMtrx[0][0]).to.eql(1);
+        expect(arryMtrx[2][2]).to.eql(9);
+        expect(arryMtrx[1][1]).to.eql(5);
+        expect(arryMtrx[1][0]).to.eql(4);
+        expect(arryMtrx[2][1]).to.eql(8);
+        expect(arryMtrx[0][1]).to.eql(2);
       });
 
     });
@@ -169,7 +169,7 @@
       ];
       it("should return a sum of all numbers in the array matrix", function() {
         expect(_.nestedForLoop(testArray)).to.equal(6);
-        expect(_.nestedForLoop(arryMtrx)).to.equal(FILL_ME_IN);
+        expect(_.nestedForLoop(arryMtrx)).to.equal(45);
       });
       
     });
